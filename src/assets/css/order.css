@@ -25,13 +25,13 @@
 .order ul li {
   width: 33.33%;
   position: relative;
-  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .15);
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 .card {
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .15);
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 .card .cover {
@@ -63,8 +63,8 @@
   background: transparent;
   width: 100%;
   display: flex;
-  gap: .5rem;
-  padding: .75rem;
+  gap: 0.5rem;
+  padding: 0.75rem;
   align-items: center;
   justify-content: space-between;
   min-height: 5rem;
@@ -75,11 +75,11 @@
 
 .card button:hover,
 .card button:focus {
-  background-color: rgba(0, 0, 0, .05);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .card button:after {
-  content: "+";
+  content: '+';
   display: flex;
   background-color: var(--accent-secondary-color);
   color: #fff;
@@ -101,14 +101,14 @@
 
 .card dt {
   font-weight: 700;
-  margin-bottom: .15rem;
+  margin-bottom: 0.15rem;
 }
 
 .card dd {
   margin: 0;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 300;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 @keyframes pulse {

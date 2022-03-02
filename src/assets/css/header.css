@@ -1,10 +1,12 @@
 nav {
   --grid-margins: calc((100vw - var(--container-width)) / 2);
   display: grid;
-  grid-template-columns: var(--grid-margins) auto max-content var(--grid-margins);
-  grid-template-areas: "a b c d";
+  grid-template-columns: var(--grid-margins) auto max-content var(
+      --grid-margins
+    );
+  grid-template-areas: 'a b c d';
   background-color: var(--accent-primary-color);
-  box-shadow: 0 0 4px 2px rgb(0, 0, 0, .25);
+  box-shadow: 0 0 4px 2px rgb(0, 0, 0, 0.25);
 }
 
 nav h1 {
@@ -39,6 +41,6 @@ nav button {
 
 nav ul a:hover,
 nav ul button:hover {
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }

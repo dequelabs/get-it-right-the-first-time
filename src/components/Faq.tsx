@@ -1,8 +1,8 @@
 import { useState } from 'preact/hooks';
 
 interface AccordianPanelProps {
-  label: string
-  children: any
+  label: string;
+  children: any;
 }
 
 const AccordianPanel = ({ label, children }: AccordianPanelProps) => {
@@ -10,12 +10,13 @@ const AccordianPanel = ({ label, children }: AccordianPanelProps) => {
   const state = showDescription ? 'expanded' : 'collapsed';
   return (
     <>
-      <div class={`question ${state}`} onClick={() => setShowDescription(!showDescription)}>{label}</div>
-      {showDescription && (
-        <p>
-          {children}
-        </p>
-      )}
+      <div
+        class={`question ${state}`}
+        onClick={() => setShowDescription(!showDescription)}
+      >
+        {label}
+      </div>
+      {showDescription && <p>{children}</p>}
     </>
   );
 };

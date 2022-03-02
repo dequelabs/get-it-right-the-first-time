@@ -1,4 +1,4 @@
-import heroImage from '../assets/images/drone.jpg'
+import heroImage from '../assets/images/drone.jpg';
 
 const Hero = () => {
   return (
@@ -11,7 +11,7 @@ const Hero = () => {
       <img src={heroImage} alt="" />
       <p>Where Pizza is a Pie in the Sky</p>
     </aside>
-  )
+  );
 };
 
 export default Hero;

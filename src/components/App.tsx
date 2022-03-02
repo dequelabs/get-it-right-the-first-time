@@ -14,7 +14,7 @@ const App = () => {
         <Faq />
       </section>
     </main>
-  )
+  );
 };
 
 export default App;

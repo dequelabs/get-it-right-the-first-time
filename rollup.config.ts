@@ -10,7 +10,7 @@ import postcss from 'rollup-plugin-postcss';
 import cssnano from 'cssnano';
 import postcssImport from 'postcss-import';
 import serve from 'rollup-plugin-serve';
-import liveReload from 'rollup-plugin-livereload'
+import liveReload from 'rollup-plugin-livereload';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 const watch = !!process.env.ROLLUP_WATCH;
@@ -18,34 +18,29 @@ const watch = !!process.env.ROLLUP_WATCH;
 export default {
   input: './src/index.tsx',
   output: {
-    file: 'dist/app.js'
+    file: 'dist/app.js',
   },
   plugins: [
     resolve({ extensions }),
     commonjs(),
     babel({
       extensions,
-      babelHelpers: 'bundled'
+      babelHelpers: 'bundled',
     }),
     image(),
     postcss({
       extract: path.resolve(__dirname, './dist/app.css'),
-      plugins: [
-        postcssImport(),
-        cssnano()
-      ]
+      plugins: [postcssImport(), cssnano()],
     }),
     html({
-      template: (args) => {
-        const htmlTemplate = fs.readFileSync(path.resolve(__dirname, './src/index.ejs'), 'utf8')
-        return ejs.render(htmlTemplate, args)
-      }
+      template: args => {
+        const htmlTemplate = fs.readFileSync(
+          path.resolve(__dirname, './src/index.ejs'),
+          'utf8'
+        );
+        return ejs.render(htmlTemplate, args);
+      },
     }),
-    ...(
-      watch ? [
-        serve('dist'),
-        liveReload()
-      ]: []
-    )
-  ]
+    ...(watch ? [serve('dist'), liveReload()] : []),
+  ],
 };

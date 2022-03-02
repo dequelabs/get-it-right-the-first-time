@@ -41,7 +41,7 @@
   flex: 1;
   padding: 1.5rem;
   counter-increment: index;
-  align-items: center;;
+  align-items: center;
 }
 
 .hero ol li:before {
@@ -60,9 +60,9 @@
 }
 
 .hero ol li:nth-child(2) {
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .hero ol li:nth-child(3) {
- background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
 }

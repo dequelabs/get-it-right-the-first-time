@@ -8,22 +8,22 @@ const popularItems = [
     name: 'Army Meal',
     description: 'Enough food to feed a small army',
     coverImage: pizza,
-    price: 200
+    price: 200,
   },
   {
     id: 2,
     name: 'Pizza and Soda',
     description: 'Because you need something to wash it down',
     coverImage: soda,
-    price: 15
+    price: 15,
   },
   {
     id: 3,
     name: 'Pizza on a Bagel',
     description: 'Combining two great tastes',
     coverImage: pizzaBagel,
-    price: 10
-  }
+    price: 10,
+  },
 ];
 
 const Order = () => {
@@ -33,7 +33,9 @@ const Order = () => {
       <ul>
         {popularItems.map(({ id, name, description, coverImage, price }) => (
           <li key={id} class="card">
-            <span class="price" id="price">${price}</span>
+            <span class="price" id="price">
+              ${price}
+            </span>
             <div class="cover">
               <img src={coverImage} alt="" />
             </div>
@@ -47,7 +49,7 @@ const Order = () => {
         ))}
       </ul>
     </div>
-  )
+  );
 };
 
 export default Order;
