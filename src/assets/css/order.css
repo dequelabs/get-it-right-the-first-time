@@ -1,0 +1,118 @@
+.order {
+  --border-color: var(--accent-secondary-color);
+  margin-top: 1rem;
+  border-top: 3px solid var(--border-color);
+  border-bottom: 3px solid var(--border-color);
+  padding: 1rem 0 1.5rem;
+}
+
+.order .heading {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.order ul {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.order ul li {
+  width: 33.33%;
+  position: relative;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .15);
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .15);
+}
+
+.card .cover {
+  display: block;
+  max-height: 140px;
+  overflow: hidden;
+}
+
+.card .cover img {
+  margin-top: -25px;
+}
+
+.card .price {
+  background: #f9f9f9;
+  color: var(--accent-primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.card button {
+  text-align: left;
+  display: block;
+  border: none;
+  background: transparent;
+  width: 100%;
+  display: flex;
+  gap: .5rem;
+  padding: .75rem;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 5rem;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color ease-in-out 100ms;
+}
+
+.card button:hover,
+.card button:focus {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+.card button:after {
+  content: "+";
+  display: flex;
+  background-color: var(--accent-secondary-color);
+  color: #fff;
+  min-width: 1.75rem;
+  min-height: 1.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.card button:hover:after,
+.card button:focus:after {
+  animation: pulse ease-in-out 1s infinite;
+}
+
+.card dl {
+  margin: 0;
+}
+
+.card dt {
+  font-weight: 700;
+  margin-bottom: .15rem;
+}
+
+.card dd {
+  margin: 0;
+  font-size: .8rem;
+  font-weight: 300;
+  opacity: .8;
+}
+
+@keyframes pulse {
+  20% {
+    transform: scale(1.2);
+  }
+}

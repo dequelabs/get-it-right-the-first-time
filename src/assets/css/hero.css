@@ -1,0 +1,68 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  border-radius: 8px;
+}
+
+.hero p {
+  background-color: var(--accent-secondary-color);
+  color: #fff;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  text-align: right;
+  font-size: 3rem;
+  max-width: 25rem;
+}
+
+.hero img {
+  max-width: 75%;
+}
+
+.hero ol {
+  display: flex;
+  flex-direction: column;
+  max-width: 25%;
+  font-size: 1.2rem;
+  background-color: var(--accent-alt-color);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.hero ol li {
+  display: grid;
+  grid-template-columns: 3rem auto;
+  flex: 1;
+  padding: 1.5rem;
+  counter-increment: index;
+  align-items: center;;
+}
+
+.hero ol li:before {
+  width: 4em;
+  display: block;
+  content: counter(index);
+  background-color: #fff;
+  color: var(--accent-primary-color);
+  border-radius: 50%;
+  font-size: 1.5em;
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.hero ol li:nth-child(2) {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.hero ol li:nth-child(3) {
+ background-color: rgba(0, 0, 0, .2);
+}

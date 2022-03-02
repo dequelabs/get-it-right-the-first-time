@@ -1,0 +1,44 @@
+nav {
+  --grid-margins: calc((100vw - var(--container-width)) / 2);
+  display: grid;
+  grid-template-columns: var(--grid-margins) auto max-content var(--grid-margins);
+  grid-template-areas: "a b c d";
+  background-color: var(--accent-primary-color);
+  box-shadow: 0 0 4px 2px rgb(0, 0, 0, .25);
+}
+
+nav h1 {
+  margin: 0;
+}
+
+nav > :first-child {
+  grid-area: b;
+}
+
+nav > :nth-child(2) {
+  grid-area: c;
+}
+
+nav > ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a,
+nav button {
+  display: flex;
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+}
+
+nav ul a:hover,
+nav ul button:hover {
+  background-color: rgba(0, 0, 0, .2);
+  cursor: pointer;
+}

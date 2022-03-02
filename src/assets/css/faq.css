@@ -1,0 +1,36 @@
+.faq ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.faq .question {
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.faq p {
+  margin-left: 1rem;
+}
+
+.faq li + li {
+  margin-top: 1rem;
+}
+
+.faq .question:before {
+  content: "";
+  display: block;
+  border-left: .4em solid currentColor;
+  border-top: .25em solid transparent;
+  border-bottom: .25em solid transparent;
+  width: 0;
+  height: 0;
+  margin-right: .5rem;
+}
+
+.faq .expanded.question:before {
+  transform: rotate(90deg);
+}

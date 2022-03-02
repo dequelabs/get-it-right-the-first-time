@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width="device-width,initial-scale=1">
+    <title>Pizza Air</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans|Open+Sans:700&display=swap">
+    <%_ files.css.forEach(file => { _%>
+    <link rel="stylesheet" href="<%= file.fileName %>">
+    <%_ }) _%>
+  </head>
+  <body>
+    <%_ files.js.forEach(file => { _%>
+    <script type="text/javascript" src="<%= file.fileName %>"></script>
+    <%_ }) _%>
+  </body>
+</html>

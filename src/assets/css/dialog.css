@@ -1,0 +1,45 @@
+.dialog {
+  position: fixed;
+  top: 100px;
+  background-color: #f9f9f9;
+  min-width: 40rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid var(--accent-secondary-color);
+}
+
+.backdrop {
+  height: 100vw;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.dialog h2 {
+  margin: 0;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.dialog__header {
+  display: flex;
+  background-color: var(--accent-secondary-color);
+  color: #fff;
+  align-items: center;
+}
+
+.dialog__header button {
+  border: none;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .25);
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 1px;
+}
