@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <nav>
       <h1>
-        <a href="/">Pizza Air</a>
+        <a href="/">🍕Pizza Air</a>
       </h1>
       <ul>
         <li>

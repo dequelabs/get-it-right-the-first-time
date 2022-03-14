@@ -43,3 +43,8 @@
   cursor: pointer;
   margin-bottom: 1px;
 }
+
+.dialog__content button {
+  margin: 1rem;
+  margin-top: 0;
+}

@@ -40,10 +40,12 @@ const Menu = ({ onClose }: MenuProps) => {
       if (event.shiftKey) {
         if (document.activeElement === firstFocusableElement) {
           event.preventDefault();
+          event.stopImmediatePropagation();
           lastFocusableElement.focus();
         }
       } else if (document.activeElement === lastFocusableElement) {
         event.preventDefault();
+        event.stopImmediatePropagation();
         firstFocusableElement.focus();
       }
     };
@@ -56,7 +58,7 @@ const Menu = ({ onClose }: MenuProps) => {
         'body > *:not([role="dialog"]):not([aria-hidden="true"])'
       )
     );
-    console.log(nonModalElements);
+
     nonModalElements.forEach(el => el.setAttribute('aria-hidden', 'true'));
 
     return () => {
@@ -78,7 +80,7 @@ const Menu = ({ onClose }: MenuProps) => {
       >
         <div class="dialog__header">
           <h2>Our Menu</h2>
-          <button onClick={onClose} aria-label="Close Menu">
+          <button onClick={onClose} aria-label="Close">
             ✕
           </button>
         </div>

@@ -33,13 +33,13 @@ const Order = () => {
       <ul>
         {popularItems.map(({ id, name, description, coverImage, price }) => (
           <li key={id} class="card">
-            <span class="price" id="price">
+            <span class="price" id={`price-${id}`}>
               ${price}
             </span>
             <div class="cover">
               <img src={coverImage} alt="" />
             </div>
-            <button aria-describedby="price">
+            <button aria-describedby={`price-${id}`} tabIndex="1">
               <dl>
                 <dt>{name}</dt>
                 <dd>{description}</dd>
