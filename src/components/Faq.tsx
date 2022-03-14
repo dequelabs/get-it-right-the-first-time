@@ -29,12 +29,12 @@ const Faq = () => {
         <ul>
           <li>
             <AccordianPanel label="How safe will my pizza be?">
-              Yes
+              All of our drones are equipped with the latest defensive technology.
             </AccordianPanel>
           </li>
           <li>
             <AccordianPanel label="What happens if my pizza isn't delivered in time?">
-              No
+              You will be promptly refunded to your original method of payment.
             </AccordianPanel>
           </li>
           <li>
