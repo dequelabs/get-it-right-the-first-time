@@ -45,3 +45,56 @@ Running `npm run watch` will build and spin up a live server at [`http://localho
 - `src/assets/css` - All the styles used by the different sections of the app
 - `src/assets/images` - All the images used by the different sections of the app
 - `src/components` - All the various components used by the different sections of the app
+
+## Accessibility Issues
+
+This is a fictional site with some accessibility issues for demonstration purposes only. Below are some examples of intentional accessibility issues along with the remediation steps hidden behind a expand/collapse element:
+
+### Automated Testing
+
+The following accessibility issues should be raised from the axe DevTools extension:
+
+* 2 - Elements should have sufficient color contrast: [`color-contrast`](https://dequeuniversity.com/rules/axe/4.4/color-contrast)
+* 3 - Elements should not have tabindex greater than zero: [`tabindex`](https://dequeuniversity.com/rules/axe/4.4/tabindex)
+
+<details>
+  <summary>How to remediate the above issues</summary>
+
+  To resolve the color contrast issue, change the value of `--accent-alt-color` in [`src/assets/css/variables.css`](./src/assets/css/variables.css) to a passing accessible color on a `#ffffff` background. Example: from `#1998fa` to `#055a9e`.
+
+  To resolve the tab index issue, remove the `tabIndex="1"` attribute on the `button` element from [`src/assets/components/Order.tsx`](./src/assets/components/Order.tsx)
+
+</details>
+
+### Intelligent Guided Testing
+
+The following accessibility issues should be raised from each tool:
+
+#### Interactive Elements
+
+* 1 - The element's roll is missing or incorrect
+* 2 - States/Properties: The element has missing or incorrect states or properties
+
+<details>
+  <summary>How to remediate the above issues</summary>
+
+  To resolve the missing/incorrect role, change the `div` element with an `onClick` attribute in the `AccordianPanel` component from `div` to `button` in [`src/assets/components/Faq.tsx`](./src/assets/components/Faq.tsx).
+
+  To resolve the missing/incorrect state, add `aria-expanded={showDescription}` to the same element from before in [`src/assets/components/Faq.tsx`](./src/assets/components/Faq.tsx).
+
+</details>
+
+#### Structure
+
+* 1 - Visual heading text is not marked as heading
+
+<details>
+  <summary>How to remediate the above issue</summary>
+
+  To resolve the missing heading, change the "What's Popular" `div` element from `div` to `h2` in [`src/assets/components/Faq.tsx`](./src/assets/components/Faq.tsx).
+
+</details>
+
+#### Keyboard
+
+There should be no accessibility issues raised as any potential issues should be resolved by prior remediation fixes.
