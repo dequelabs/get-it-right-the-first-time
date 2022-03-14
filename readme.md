@@ -62,7 +62,7 @@ The following accessibility issues should be raised from the axe DevTools extens
 
   To resolve the color contrast issue, change the value of `--accent-alt-color` in [`src/assets/css/variables.css`](./src/assets/css/variables.css) to a passing accessible color on a `#ffffff` background. Example: from `#1998fa` to `#055a9e`.
 
-  To resolve the tab index issue, remove the `tabIndex="1"` attribute on the `button` element from [`src/assets/components/Order.tsx`](./src/assets/components/Order.tsx)
+  To resolve the tab index issue, remove the `tabIndex="1"` attribute on the `button` element from [`src/components/Order.tsx`](./src/components/Order.tsx)
 
 </details>
 
@@ -78,9 +78,9 @@ The following accessibility issues should be raised from each tool:
 <details>
   <summary>How to remediate the above issues</summary>
 
-  To resolve the missing/incorrect role, change the `div` element with an `onClick` attribute in the `AccordianPanel` component from `div` to `button` in [`src/assets/components/Faq.tsx`](./src/assets/components/Faq.tsx).
+  To resolve the missing/incorrect role, change the `div` element with an `onClick` attribute in the `AccordianPanel` component from `div` to `button` in [`src/components/Faq.tsx`](./src/components/Faq.tsx).
 
-  To resolve the missing/incorrect state, add `aria-expanded={showDescription}` to the same element from before in [`src/assets/components/Faq.tsx`](./src/assets/components/Faq.tsx).
+  To resolve the missing/incorrect state, add `aria-expanded={showDescription}` to the same element from before in [`src/components/Faq.tsx`](./src/components/Faq.tsx).
 
 </details>
 
@@ -91,7 +91,7 @@ The following accessibility issues should be raised from each tool:
 <details>
   <summary>How to remediate the above issue</summary>
 
-  To resolve the missing heading, change the "What's Popular" `div` element from `div` to `h2` in [`src/assets/components/Faq.tsx`](./src/assets/components/Faq.tsx).
+  To resolve the missing heading, change the "What's Popular" `div` element from `div` to `h2` in [`src/components/Faq.tsx`](./src/components/Faq.tsx).
 
 </details>
 
