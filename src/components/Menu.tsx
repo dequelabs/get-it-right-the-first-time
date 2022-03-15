@@ -19,7 +19,7 @@ interface MenuProps {
 }
 
 const Menu = ({ onClose }: MenuProps) => {
-  const dialogRef = useRef<HTMLElement | null>(null);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     // Immediately focus the dialog on render

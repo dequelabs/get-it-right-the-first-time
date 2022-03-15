@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks';
 
 interface AccordianPanelProps {
   label: string;
-  children: any;
+  children?: any;
 }
 
 const AccordianPanel = ({ label, children }: AccordianPanelProps) => {

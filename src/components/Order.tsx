@@ -39,7 +39,7 @@ const Order = () => {
             <div class="cover">
               <img src={coverImage} alt="" />
             </div>
-            <button aria-describedby={`price-${id}`} tabIndex="1">
+            <button aria-describedby={`price-${id}`} tabIndex={1}>
               <dl>
                 <dt>{name}</dt>
                 <dd>{description}</dd>

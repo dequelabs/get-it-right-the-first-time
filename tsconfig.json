@@ -5,7 +5,9 @@
     "moduleResolution": "node",
     "jsx": "preserve",
     "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment"
+    "jsxFragmentFactory": "Fragment",
+    "noEmit": true,
+    "typeRoots" : ["node_modules/@types", "src/types"]
   },
-  "include": ["src/*.{ts,tsx}"]
+  "include": ["src/**/*"]
 }
